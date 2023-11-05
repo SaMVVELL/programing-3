@@ -127,3 +127,22 @@ function draw() {
 
 
 }
+
+
+// let student ={
+//         name:"Poghos",
+//         age:33,
+//         isTumoStudent:true,
+
+//         showInfo(){
+//                 console.log(this.name,this.age);
+//         }
+// }
+// student.showInfo()
+
+
+// let erexa = new Child("Artur",18,"male");
+// erexa.jump()
+// erexa.speak()
+// erexa.walk()
+// console.log(erexa.name,erexa.gen);
