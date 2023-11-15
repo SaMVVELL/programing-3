@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Of Life</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+     <script src="livingCreature.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href = "style.css">
+</head>
+
+<body  bgcolor="#AFEEEE">
+    <h1>Game Of Life</h1>
+    <h2>Samvel Grigoryan</h2>
+    <h3>PROGRAMING II</h3>
+
+    <table>
+        <tr>
+
+        </tr>
+        <tr>
+            <td class="grass">Խոտ: բազմանում է ազատ մատրիքսների վրա։ ՈՒնի կանաչ գույն։</td>
+            <td class="grassEater">Խոտակեր: Կարող է շարժվել ազատ մատրիքսների վրա,
+                ունի սեփական Էներգիա, որը աճում է Խոտ ուտելու հաշվին և
+                նվազում է շարժման ժամանակ։ ՈՒնի դեղին գույն։</td>
+
+            <td class="allEater">Ամենակեր: Կարող է շարժվել ազատ մատրիքսների վրա,
+                ունի սեփական Էներգիա, որը աճում է Խոտ և Խոտակեր ուտելու հաշվին և
+                նվազում է շարժման ժամանակ ։ ՈՒնի կարմիր գույն։</td>
+            </td>
+            <td class="grassEater">Պաշտպան։ Կարող է շարժվել ազատ մատրիքսների վրա,
+                ունի սեփական Էներգիա, որը աճում է խոտակեր և ամենակեր ուտելու հաշվին և
+                նվազում է շարժման ժամանակ։ ՈՒնի ջրային գույն։
+            <td class="virus">Վիրուս։ Կարող է շարժվել ազատ մատրիքսների վրա
+                ունի սեփական Էներգիա, որը աճում է խոտ, խոտակեր,ամենակեր և պաշտպան ուտելու հաշվին և
+                նվազում է շարժման ժամանակ։ ՈՒնի ինդիգո գույն։
+            </td>
+            </td>
+
+        </tr>
+    </table>
+</body>
+
+</html>
