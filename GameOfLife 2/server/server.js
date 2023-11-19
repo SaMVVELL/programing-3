@@ -17,7 +17,7 @@ server.listen(3000, () => {
 
 
 function matrixGenerator(matrixSize, grass, grassEater, allEater, grassSequre, virus) {
-    let matrix = [];
+    matrix = [];
 
     for (let i = 0; i < matrixSize; i++) {
         matrix.push([])
@@ -66,7 +66,7 @@ function matrixGenerator(matrixSize, grass, grassEater, allEater, grassSequre, v
     return matrix
 }
 
-var matrix = matrixGenerator(30, 17, 10, 10, 15, 5)
+matrix = matrixGenerator(30, 17, 10, 10, 15, 5)
 
 
 
@@ -74,11 +74,12 @@ var matrix = matrixGenerator(30, 17, 10, 10, 15, 5)
 io.sockets.emit('send matrix', matrix)
 
 
-var grassArr = [];
-var grassEaterArr = [];
-var allEatArr = [];
-var grassSequreArr = [];
-var virusArr = [];
+ grassArr = [];
+ grassEaterArr = [];
+ allEatArr = [];
+ grassSequreArr = [];
+ virusArr = [];
+
 Grass = require("./grass")
 GrassEater = require("./grassEater")
 AllEater = require("./allEater")

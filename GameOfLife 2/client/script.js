@@ -4,7 +4,7 @@ let socket = io();
 let side = 20
 
 function setup() {
-        frameRate(5)
+        frameRate(15)
         createCanvas(matrix[0].length * side, matrix.length * side)
 }
 
@@ -12,7 +12,7 @@ function setup() {
 
 
 function sarqel(matrix) {
-        console.log(matrix);
+        // console.log(matrix);
 
         for (let y = 0; y < matrix.length; y++) {
                 for (let x = 0; x < matrix[y].length; x++) {
@@ -43,6 +43,6 @@ function sarqel(matrix) {
 
 setInterval(
         function(){
-                socket.on('send matrix',sarqel)
+                socket.on('send matrix',sarqel(matrix))
         },1000
 )
