@@ -30,37 +30,51 @@ function matrixGenerator(matrixSize, grass, grassEater, allEater, grassSequre, v
     for (let i = 0; i < grass; i++) {
         let x = Math.floor(Math.random() * matrixSize)
         let y = Math.floor(Math.random() * matrixSize)
-        matrix[y][x] = 1
+        if(matrix[y][x] ==0){
+            matrix[y][x] = 1
+
+        }
     }
 
     for (let i = 0; i < grassEater; i++) {
         let x = Math.floor(Math.random() * matrixSize)
         let y = Math.floor(Math.random() * matrixSize)
-        matrix[y][x] = 2
+        if(matrix[y][x] ==0){
+            matrix[y][x] = 2
+
+        }
     }
 
 
     for (let i = 0; i < allEater; i++) {
         let x = Math.floor(Math.random() * matrixSize)
         let y = Math.floor(Math.random() * matrixSize)
-        matrix[y][x] = 3
+        if(matrix[y][x] ==0){
+            matrix[y][x] = 3
+
+        }
     }
 
     for (let i = 0; i < grassSequre; i++) {
         let x = Math.floor(Math.random() * matrixSize)
         let y = Math.floor(Math.random() * matrixSize)
 
+        if(matrix[y][x] ==0){
+            matrix[y][x] = 4
 
+        }
 
-        matrix[y][x] = 4
 
     }
 
     for (let i = 0; i < virus; i++) {
         let x = Math.floor(Math.random() * matrixSize)
         let y = Math.floor(Math.random() * matrixSize)
+        if(matrix[y][x] ==0){
+            matrix[y][x] = 5
 
-        matrix[y][x] = 5
+        }
+
 
     }
     return matrix
