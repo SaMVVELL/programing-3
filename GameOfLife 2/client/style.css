@@ -19,3 +19,35 @@ table, td, th{
     font-size: 15px;
 }
 
+.buttoncontainer {
+    text-align: center;
+}
+
+button{
+    margin-bottom: 10px;
+    margin-left: 100px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #46bcd7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #1d49aa;
+  }
+
+  button:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+button{
+    min-width: 100px;
+}
+ 
+button{
+    font-family: inherit;
+}
+

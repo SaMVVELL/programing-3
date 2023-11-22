@@ -7,7 +7,6 @@
     <title>Game Of Life</title>
     <script src="socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href = "style.css">
 </head>
 
@@ -15,6 +14,34 @@
     <h1>Game Of Life</h1>
     <h2>Samvel Grigoryan</h2>
     <h3>PROGRAMING II</h3>
+
+
+    <div class="buttoncontainer">
+        <button id="Start"><span>Սկսել</span></button>
+        <button id="Storm"><span>Փոթորիկ</span></button>
+        <button id="Spring"><span>Գարուն</span></button>
+        <button id="Summer"><span>Ամառ</span></button>
+        <button id="Autumn"><span>Աշուն</span></button>
+        <button id="Winter"><span>Ձմեռ</span></button>
+    </div>
+
+
+    <table>
+        <tr>
+
+        </tr>
+        <tr>
+            <td class="Start">Սկսել։ Կոճակը սեղմելու դեպքում սկսում է խաղը</td>
+            <td class="Storm">Փոթորիկ։ Կոճակը սեղմելու դեպքում սկսվում է փոթորիկ</td>
+            <td class="Spring">Գարուն։ Կոճակը սեղմելու դեպքում խաղում սկսվում է գարուն</td>
+            <td class="Summer">Ամառ։ Կոճակը սեղմելու դեպքում խաղում սկսվում է ամառ</td>
+            <td class="Autumn">Աշուն։ Կոճակը սեղմելու դեպքում խաղում սկսվում է աշուն</td>
+            <td class="Winter">Ձմեռ։ Կոճակը սեղմելու դեպքում խաղում սկսվում է ձմեռ</td>
+
+        </tr>
+    </table>
+
+
 
     <table>
         <tr>
@@ -41,6 +68,9 @@
 
         </tr>
     </table>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

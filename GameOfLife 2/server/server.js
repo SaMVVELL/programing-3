@@ -3,6 +3,7 @@ let app = express();
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
 let fs = require("fs");
+const { createHistogram } = require('perf_hooks');
 
 
 
@@ -93,12 +94,14 @@ io.sockets.emit('send matrix', matrix)
  allEatArr = [];
  grassSequreArr = [];
  virusArr = [];
+ stormArr = [];
 
 Grass = require("./grass")
 GrassEater = require("./grassEater")
 AllEater = require("./allEater")
 GrassSequre = require("./grassSequre")
 Virus = require("./virus")
+Storm = require("./Storm")
 
 
 //test
@@ -121,6 +124,9 @@ function create0bject(matrix) {
             } else if (matrix[y][x] == 5) {
                 let vir = new Virus(x, y)
                 virusArr.push(vir)
+            }else if (matrix[y][x] == 6){
+                let storm = new Storm(x,y)
+                stormArr.push(storm)
             }
         }
     }
@@ -151,8 +157,13 @@ function game() {
     io.sockets.emit("send matrix", matrix)
 }
 
+function createShtorm(){
+    console.log("Create shtorm !!!");
+}
+
 setInterval(game, 1000)
 
-io.on('connection', function() {
+io.on('connection', function(socket) {
     create0bject(matrix)
+    socket.on("shtorm", createShtorm)
 })

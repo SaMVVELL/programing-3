@@ -7,17 +7,17 @@ module.exports = class AllEater extends LivingCreature{
     }
 
     getNewCordinates(){
-		this.directions = [
-			[this.x - 1, this.y - 1],
-			[this.x, this.y - 1],
-			[this.x + 1, this.y - 1],
-			[this.x - 1, this.y],
-			[this.x + 1, this.y],
-			[this.x - 1, this.y + 1],
-			[this.x, this.y + 1],
-			[this.x + 1, this.y + 1]
-		];
-	}
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
     
 
     chooseCell(char, char2) {
@@ -28,8 +28,8 @@ module.exports = class AllEater extends LivingCreature{
 
 
     mul() {
-        let emptyCell = this.chooseCell(0)
-        let newCell = emptyCells[Math.floor(Math.random() * emptyCell.length)]
+        let emptyCells = this.chooseCell(0)
+        let newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
         if (newCell) {
             let newX = newCell[0]
