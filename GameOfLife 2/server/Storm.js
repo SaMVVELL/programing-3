@@ -26,8 +26,7 @@ module.exports = class Storm extends LivingCreature {
 
     eat() {
         let emptyCell = this.chooseCell(1, 2, 3, 4, 5);
-        let newCell = emptyCell * emptyCell.length
-        if (newCell > 0) {
+        if (emptyCell.length > 0) {
             let newX = newCell[0]
             let newY = newCell[1]
             for (let i in grassArr) {

@@ -3,7 +3,6 @@ let app = express();
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
 let fs = require("fs");
-const { createHistogram } = require('perf_hooks');
 
 
 
@@ -159,6 +158,15 @@ function game() {
 
 function createShtorm(){
     console.log("Create shtorm !!!");
+    for (let i = 0;i <matrix.length;i++ ){
+        for(let j = 0;j < matrix[y].length;j++){
+            let stor = matrix[y][x]
+            if (stor == 0){
+                 
+            }
+        }
+
+    }
 }
 
 setInterval(game, 1000)
@@ -167,3 +175,22 @@ io.on('connection', function(socket) {
     create0bject(matrix)
     socket.on("shtorm", createShtorm)
 })
+
+
+
+//statistics
+
+
+var statistics = {
+  
+}
+
+
+setInterval(function(){
+    
+    fs.writeFile( "statistics.js",JSON.stringify(statistics),()=>{
+    statistics.grass = grassArr.length 
+    statistics.grassEater = grassEaterArr.length 
+    console.log(statistics);
+})
+},1000)
