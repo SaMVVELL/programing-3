@@ -65,7 +65,7 @@ module.exports = class GrassEater extends LivingCreature {
             this.y = newY
 
 
-            if (this.energy >= 8) {
+            if (this.energy >= 5) {
                 this.mul()
             }
         } else {

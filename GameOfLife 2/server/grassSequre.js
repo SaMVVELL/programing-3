@@ -71,7 +71,7 @@ module.exports = class GrassSequre extends LivingCreature{
            this.x = newX
            this.y = newY
 
-           if (this.energy > 15) {
+           if (this.energy > 7) {
                this.mul()
            }
 

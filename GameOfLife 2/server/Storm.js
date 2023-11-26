@@ -4,6 +4,7 @@ let LivingCreature = require("./livingCreature");
 module.exports = class Storm extends LivingCreature {
     constructor(x, y) {
         super(x, y)
+
     }
 
     getNewCordinates() {
@@ -25,6 +26,7 @@ module.exports = class Storm extends LivingCreature {
     }
 
     eat() {
+        this.energy--
         let emptyCell = this.chooseCell(1, 2, 3, 4, 5);
         if (emptyCell.length > 0) {
             let newX = newCell[0]
@@ -49,18 +51,19 @@ module.exports = class Storm extends LivingCreature {
                     grassSequreArr.splice(i, 1)
                 }
 
-                for (let i in virusArr) {
-                    if (newX == virusArr[i].x && newY == virusArr[i.y])
-                        virusArr.splice(i, 1)
-                }
-                matrix[newY][newX] = 0
-                matrix[this.y][this.x] = 0
 
-                if (this.energy >= 15) {
-                    this.mul()
-                }
 
+                // if ( eat()) {
+                //     this.die()
             }
+            for (let i in virusArr) {
+                if (newX == virusArr[i].x && newY == virusArr[i.y])
+                    virusArr.splice(i, 1)
+            }
+            matrix[newY][newX] = 0
+            matrix[this.y][this.x] = 0
+
         }
     }
 }
+    

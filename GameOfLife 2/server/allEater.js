@@ -75,7 +75,7 @@ module.exports = class AllEater extends LivingCreature{
             this.x = newX
             this.y = newY
 
-            if (this.energy > 30) {
+            if (this.energy > 8) {
                 this.mul()
             }
 

@@ -1,1 +1,1 @@
-{"grass":250,"grassEater":0}
+{"grass":30,"grassEater":0,"allEater":0,"grassSequre":0,"virus":192}

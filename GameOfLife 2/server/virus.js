@@ -72,7 +72,7 @@ module.exports = class VirusCl extends LivingCreature {
          matrix[newY][newX] = 0
          matrix[this.y][this.x] = 0
          
-         if (this.energy >= 15) {
+         if (this.energy >= 10) {
             this.mul()
         }
 
